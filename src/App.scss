@@ -1,0 +1,65 @@
+#clock {
+  position: "relative";
+  top: "50vh";
+  left: "50vw";
+  margin-top: "-100px";
+  margin-left: "-100px";
+
+  #frame {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+
+    .frame-cls-1 {
+      fill: #128add;
+      stroke: #fff;
+      stroke-miterlimit: 10;
+    }
+    .frame-cls-2 {
+      fill:#fff;
+    }
+  }
+  #min-hand {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 2;
+    top: -200px;
+
+    .min-hand-cls-1 {
+      fill:none;
+    }
+    .min-hand-cls-2 {
+      fill:#fff;
+    }  }
+  #hour-hand {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 3;
+    top: -400px;
+
+    .hour-hand-cls-1 {
+      fill: none;
+    }
+    .hour-hand-cls-2 {
+      fill: #fff;
+    }
+  }
+  #sec-hand {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 4;
+    top: -600px;
+
+    .sec-hand-cls-1,.sec-hand-cls-2 {
+      fill: none;
+    }
+    .sec-hand-cls-2 {
+      stroke: #fff;
+      stroke-miterlimit: 10;
+    }
+  }
+}
