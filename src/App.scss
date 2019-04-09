@@ -1,65 +1,72 @@
-#clock {
-  position: "relative";
-  top: "50vh";
-  left: "50vw";
-  margin-top: "-100px";
-  margin-left: "-100px";
+html, body {
 
-  #frame {
+  #clock {
+    // centerize clock
+    $pos-vertical: calc(50vh - 100px);
+    $pos-horizontal: calc(50vw - 100px);
+    margin: $pos-vertical $pos-horizontal;
+
     width: 200px;
     height: 200px;
-    position: relative;
-    z-index: 1;
 
-    .frame-cls-1 {
-      fill: #128add;
-      stroke: #fff;
-      stroke-miterlimit: 10;
-    }
-    .frame-cls-2 {
-      fill:#fff;
-    }
-  }
-  #min-hand {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 2;
-    top: -200px;
+    #frame {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      z-index: 1;
 
-    .min-hand-cls-1 {
-      fill:none;
+      .frame-cls-1 {
+        fill: #128add;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+      .frame-cls-2 {
+        fill: #fff;
+      }
     }
-    .min-hand-cls-2 {
-      fill:#fff;
-    }  }
-  #hour-hand {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 3;
-    top: -400px;
+    #min-hand {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      z-index: 2;
+      top: -200px;
 
-    .hour-hand-cls-1 {
-      fill: none;
+      .min-hand-cls-1 {
+        fill: none;
+      }
+      .min-hand-cls-2 {
+        fill: #fff;
+      }
     }
-    .hour-hand-cls-2 {
-      fill: #fff;
-    }
-  }
-  #sec-hand {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 4;
-    top: -600px;
+    #hour-hand {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      z-index: 3;
+      top: -400px;
 
-    .sec-hand-cls-1,.sec-hand-cls-2 {
-      fill: none;
+      .hour-hand-cls-1 {
+        fill: none;
+      }
+      .hour-hand-cls-2 {
+        fill: #fff;
+      }
     }
-    .sec-hand-cls-2 {
-      stroke: #fff;
-      stroke-miterlimit: 10;
+    #sec-hand {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      z-index: 4;
+      top: -600px;
+
+      .sec-hand-cls-1,
+      .sec-hand-cls-2 {
+        fill: none;
+      }
+      .sec-hand-cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
     }
   }
 }
