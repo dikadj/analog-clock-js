@@ -69,13 +69,20 @@ const runClock = () => {
   const min = date.getMinutes()
   const hour = date.getHours()
 
-  const totSec = Math.round((sec/60)*360)
-  const totMin = Math.round((min/60)*360)
-  const totHour = Math.round((hour/24)*720)
+  const minToSec = min*60
+  const hourToSec = hour*3600
 
-  $("#sec-hand").css({ transform: `rotate(${totSec}deg)`})
-  $("#min-hand").css({ transform: `rotate(${totMin}deg)`})
-  $("#hour-hand").css({ transform: `rotate(${totHour}deg)`})
+  const totSecPerMin = 60
+  const totSecPerHour = 60*60
+  const totSecPerDay = 24*60*60
+
+  const minHand = Math.round(((sec+minToSec)/totSecPerHour)*360)
+  const hourHand = Math.round(((sec+minToSec+hourToSec)/totSecPerDay)*720)
+  const secHand = Math.round((sec/totSecPerMin)*360)
+
+  $("#sec-hand").css({ transform: `rotate(${secHand}deg)`})
+  $("#min-hand").css({ transform: `rotate(${minHand}deg)`})
+  $("#hour-hand").css({ transform: `rotate(${hourHand}deg)`})
 }
 
 setInterval(runClock, 1000)
